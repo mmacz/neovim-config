@@ -49,6 +49,13 @@ return require('packer').startup(function(use)
     vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
     end 
   }
+  use {
+      "kdheepak/lazygit.nvim",
+      -- optional for floating window border decoration
+      requires = {
+          "nvim-lua/plenary.nvim",
+      },
+  }
 
   if packer_bootstrap then
     require('packer').sync()
