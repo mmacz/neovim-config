@@ -20,11 +20,11 @@ vim.keymap.set('n', '<c-b>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<c-f>', ':NvimTreeFindFile<CR>')
 
 -- Telescope
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<c-f>f', builtin.find_files, {})
-vim.keymap.set('n', '<Space><Space>', builtin.oldfiles, {})
-vim.keymap.set('n', '<Space>lg', builtin.live_grep, {})
-vim.keymap.set('n', '<Space>ht', builtin.help_tags, {})
+local telescope = require('telescope.builtin')
+vim.keymap.set('n', '<c-f>f', telescope.find_files, {})
+vim.keymap.set('n', '<Space><Space>', telescope.oldfiles, {})
+vim.keymap.set('n', '<Space>lg', telescope.live_grep, {})
+vim.keymap.set('n', '<Space>ht', telescope.help_tags, {})
 
 -- Floatterm
 vim.keymap.set('n', '<C-n>', ":FloatermNew<CR>", {}) 
