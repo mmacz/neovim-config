@@ -76,6 +76,12 @@ return require('packer').startup(function(use)
           "rcarriga/nvim-notify"
       }
   }
+  use {
+      "folke/todo-comments.nvim",
+      requires = {
+          "nvim-lua/plenary.nvim"
+      }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
