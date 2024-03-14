@@ -69,6 +69,13 @@ return require('packer').startup(function(use)
           "nvim-lua/plenary.nvim"
       }
   }
+  use {
+      "folke/noice.nvim",
+      requires = {
+          "MunifTanjim/nui.nvim",
+          "rcarriga/nvim-notify"
+      }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
