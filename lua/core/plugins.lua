@@ -74,7 +74,12 @@ return require('packer').startup(function(use)
       requires = {
           "MunifTanjim/nui.nvim",
           "rcarriga/nvim-notify"
-      }
+      },
+      config = function()
+        require("notify").setup {
+            background_color = "#000000"
+        }
+        end
   }
   use {
       "folke/todo-comments.nvim",
