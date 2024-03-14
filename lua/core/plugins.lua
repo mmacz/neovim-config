@@ -63,6 +63,12 @@ return require('packer').startup(function(use)
           {'MunifTanjim/nui.nvim'}
       }
   }
+  use {
+      "nvim-pack/nvim-spectre",
+      requires = {
+          "nvim-lua/plenary.nvim"
+      }
+  }
 
   if packer_bootstrap then
     require('packer').sync()
