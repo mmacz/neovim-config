@@ -58,12 +58,6 @@ return require('packer').startup(function(use)
       },
   }
   use {
-      'VonHeikemen/fine-cmdline.nvim',
-      requires = { 
-          {'MunifTanjim/nui.nvim'}
-      }
-  }
-  use {
       "nvim-pack/nvim-spectre",
       requires = {
           "nvim-lua/plenary.nvim"

@@ -21,18 +21,15 @@ vim.keymap.set('n', '<c-f>', ':NvimTreeFindFile<CR>')
 
 -- Telescope
 local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<Space>f', telescope.find_files, {})
-vim.keymap.set('n', '<Space><Space>', telescope.oldfiles, {})
-vim.keymap.set('n', '<Space>lg', telescope.live_grep, {})
-vim.keymap.set('n', '<Space>ht', telescope.help_tags, {})
+vim.keymap.set('n', '<leader>f', telescope.find_files, {})
+vim.keymap.set('n', '<leader><leader>', telescope.oldfiles, {})
+vim.keymap.set('n', '<leader>lg', telescope.live_grep, {})
+vim.keymap.set('n', '<leader>ht', telescope.help_tags, {})
 
 -- Floatterm
 vim.keymap.set('n', '<C-n>', ":FloatermNew<CR>", {}) 
 vim.keymap.set('t', '<C-t>', ":FloatermToggle<CR>", {})
 vim.keymap.set('t', '<C-k>', ":FloatermKill!<CR>", {})
-
--- Fine cmdline
-vim.keymap.set('n', '<leader>;', '<cmd>:FineCmdline<CR>', {noremap=true})
 
 -- nvim-spectre
 vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {desc = "Toggle Spectre"})
