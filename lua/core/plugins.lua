@@ -57,6 +57,12 @@ return require('packer').startup(function(use)
           "nvim-lua/plenary.nvim",
       },
   }
+  use {
+      'VonHeikemen/fine-cmdline.nvim',
+      requires = { 
+          {'MunifTanjim/nui.nvim'}
+      }
+  }
 
   if packer_bootstrap then
     require('packer').sync()

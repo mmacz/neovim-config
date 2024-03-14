@@ -1,5 +1,5 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.keymap.set('n', '<laeder>y', '"+y')
 vim.keymap.set('v', '<leader>y', '"+y')
@@ -21,12 +21,15 @@ vim.keymap.set('n', '<c-f>', ':NvimTreeFindFile<CR>')
 
 -- Telescope
 local telescope = require('telescope.builtin')
-vim.keymap.set('n', '<c-f>f', telescope.find_files, {})
+vim.keymap.set('n', '<Space>f', telescope.find_files, {})
 vim.keymap.set('n', '<Space><Space>', telescope.oldfiles, {})
 vim.keymap.set('n', '<Space>lg', telescope.live_grep, {})
 vim.keymap.set('n', '<Space>ht', telescope.help_tags, {})
 
 -- Floatterm
 vim.keymap.set('n', '<C-n>', ":FloatermNew<CR>", {}) 
-vim.keymap.set('n', '<C-t>t', ":FloatermToggle<CR>", {})
+vim.keymap.set('t', '<C-t>', ":FloatermToggle<CR>", {})
 vim.keymap.set('t', '<C-k>', ":FloatermKill!<CR>", {})
+
+-- Fine cmdline
+vim.keymap.set('n', '<leader>;', '<cmd>:FineCmdline<CR>', {noremap=true})
