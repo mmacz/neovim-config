@@ -15,6 +15,9 @@ vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 -- Lazygit
 vim.keymap.set('n', '<c-l>g', ':LazyGit<CR>', {})
 
+-- Lazydocker
+vim.keymap.set('n', '<c-l>d', ':LazyDocker<CR>', { desc = "Toggle LazyDocker", noremap = true, silent = true })
+
 -- NvimTree
 vim.keymap.set('n', '<c-b>', ':NvimTreeToggle<CR>')
 vim.keymap.set('n', '<c-f>', ':NvimTreeFindFile<CR>')

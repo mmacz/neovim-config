@@ -58,6 +58,15 @@ return require('packer').startup(function(use)
       },
   }
   use {
+      "crnvl96/lazydocker.nvim",
+      config = function()
+          require("lazydocker").setup()
+      end,
+      requires = {
+          "MunifTanjim/nui.nvim"
+      }
+  }
+  use {
       "nvim-pack/nvim-spectre",
       requires = {
           "nvim-lua/plenary.nvim"
