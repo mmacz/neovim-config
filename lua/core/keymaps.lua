@@ -19,8 +19,8 @@ vim.keymap.set('n', '<c-l>g', ':LazyGit<CR>', {})
 vim.keymap.set('n', '<c-l>d', ':LazyDocker<CR>', { desc = "Toggle LazyDocker", noremap = true, silent = true })
 
 -- NvimTree
-vim.keymap.set('n', '<c-b>', ':NvimTreeToggle<CR>')
-vim.keymap.set('n', '<c-f>', ':NvimTreeFindFile<CR>')
+vim.keymap.set('n', '<c-t>t', ':NvimTreeToggle<CR>')
+vim.keymap.set('n', '<c-t>f', ':NvimTreeFindFile<CR>')
 
 -- Telescope
 local telescope = require('telescope.builtin')
