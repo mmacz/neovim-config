@@ -7,4 +7,5 @@ require("plugin_config.noice")
 require("plugin_config.mason")
 require("plugin_config.rust-tools")
 require("plugin_config.cmp")
+require("plugin_config.require")
 
