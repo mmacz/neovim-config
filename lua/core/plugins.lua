@@ -16,10 +16,18 @@ return require('packer').startup(function(use)
     use 'ellisonleao/gruvbox.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
-    use 'nvim-lualine/lualine.nvim'
     use 'nvim-treesitter/nvim-treesitter'
     use 'voldikss/vim-floaterm'
     use 'airblade/vim-gitgutter'
+
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = {
+            { "yavorski/lualine-macro-recording.nvim" },
+            { "yavorski/lualine-lsp-progress.nvim" },
+            { "yavorski/lualine-lsp-client-name.nvim" },
+        }
+    }
 
     use {
         'folke/which-key.nvim',
