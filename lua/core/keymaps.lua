@@ -17,7 +17,7 @@ vim.keymap.set('n', '<leader>cmg', ':CMakeGenerate<CR>', { desc = "Generate Make
 vim.keymap.set('n', '<leader>cmb', ':CMakeBuild<CR>', { desc = "Build CMake target", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>cmr', ':CMakeRun<CR>', { desc = "Run CMake target", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>cmt', ':CMakeRunTest<CR>', { desc = "Execute CTest", noremap = true, silent = true })
-vim.keymap.set('n', '<leader>cmc', ':CMakeClean<CR>', { desc = "Clean CMake cache", noreamp = true, silent = true })
+vim.keymap.set('n', '<leader>cmc', ':CMakeClean<CR>', { desc = "Clean CMake cache", noremap = true, silent = true })
 
 -- Lazygit
 vim.keymap.set('n', '<c-l>g', ':LazyGit<CR>', {})
