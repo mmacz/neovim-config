@@ -39,3 +39,29 @@ vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {de
 vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {desc = "Search current word"})
 vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {desc = "Search current word"})
 vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {desc = "Search on current file"})
+
+-- lsp
+-- vim.keymap.set('n', '<leader>gd', telescope.lsp_definitions)
+-- vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration)
+-- vim.keymap.set('n', '<leader>gt', telescope.lsp_type_definitions)
+-- vim.keymap.set('n', '<leader>gi', telescope.lsp_implementations)
+-- vim.keymap.set('n', '<leader>gr', telescope.lsp_references)
+-- vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover)
+-- vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename)
+-- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
+-- vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
+-- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+-- vim.keymap.set('n', ']d', vim.diagnostic.goto_prev)
+
+-- rust-tools
+-- vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+-- vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+
+-- venn
+-- vim.api.nvim_set_keymap('n', '<leader>v', ":lua Toggle_venn()<CR>", { noremap = true})
+-- vim.api.nvim_buf_set_keymap(0, "n", "J", "<C-v>j:VBox<CR>", {noremap = true})
+-- vim.api.nvim_buf_set_keymap(0, "n", "K", "<C-v>k:VBox<CR>", {noremap = true})
+-- vim.api.nvim_buf_set_keymap(0, "n", "L", "<C-v>l:VBox<CR>", {noremap = true})
+-- vim.api.nvim_buf_set_keymap(0, "n", "H", "<C-v>h:VBox<CR>", {noremap = true})
+-- -- draw a box by pressing "f" with visual selection
+-- vim.api.nvim_buf_set_keymap(0, "v", "f", ":VBox<CR>", {noremap = true})
