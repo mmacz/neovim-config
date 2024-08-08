@@ -23,9 +23,9 @@ return require('packer').startup(function(use)
     use {
         'nvim-lualine/lualine.nvim',
         requires = {
-            { "yavorski/lualine-macro-recording.nvim" },
-            { "yavorski/lualine-lsp-progress.nvim" },
-            { "yavorski/lualine-lsp-client-name.nvim" },
+            { 'yavorski/lualine-macro-recording.nvim' },
+            { 'yavorski/lualine-lsp-progress.nvim' },
+            { 'yavorski/lualine-lsp-client-name.nvim' },
         }
     }
 
@@ -58,34 +58,34 @@ return require('packer').startup(function(use)
   -- }
 
     use {
-        "kdheepak/lazygit.nvim",
+        'kdheepak/lazygit.nvim',
         requires = {
-            "nvim-lua/plenary.nvim",
+            'nvim-lua/plenary.nvim',
         },
     }
     use {
-        "crnvl96/lazydocker.nvim",
+        'crnvl96/lazydocker.nvim',
         config = function()
-            require("lazydocker").setup()
+            require('lazydocker').setup()
         end,
         requires = {
-            "MunifTanjim/nui.nvim"
+            'MunifTanjim/nui.nvim'
         }
     }
     use {
-        "nvim-pack/nvim-spectre",
-        requires = { "nvim-lua/plenary.nvim" }
+        'nvim-pack/nvim-spectre',
+        requires = { 'nvim-lua/plenary.nvim' }
     }
     use {
-        "folke/noice.nvim",
+        'folke/noice.nvim',
         requires = {
-            "MunifTanjim/nui.nvim",
-            "rcarriga/nvim-notify"
+            'MunifTanjim/nui.nvim',
+            'rcarriga/nvim-notify'
         },
     }
     use {
-        "folke/todo-comments.nvim",
-        requires = { "nvim-lua/plenary.nvim" }
+        'folke/todo-comments.nvim',
+        requires = { 'nvim-lua/plenary.nvim' }
     }
   
     use {
