@@ -9,4 +9,5 @@ require("plugin_config.rust-tools")
 require("plugin_config.cmp")
 require("plugin_config.require")
 require("plugin_config.lsp")
+require("plugin_config.venn")
 

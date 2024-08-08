@@ -110,6 +110,9 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'                            
     use 'hrsh7th/vim-vsnip'
 
+    -- ASCII drawing
+    use 'jbyuki/venn.nvim'
+
     if packer_bootstrap then
         require('packer').sync()
     end
