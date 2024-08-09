@@ -12,6 +12,8 @@ local servers = {
 
     cmake = {},
 
+    pyright = {},
+
     rust_analyzer = {
         cargo = {
             allFeatures = true,
