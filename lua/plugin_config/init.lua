@@ -11,4 +11,5 @@ require("plugin_config.notify")
 require("plugin_config.lsp")
 require("plugin_config.venn")
 require("plugin_config.cmake-tools")
+require("plugin_config.devcontainer")
 

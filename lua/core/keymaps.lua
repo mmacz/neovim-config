@@ -12,6 +12,10 @@ vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { noremap = true, silent = true })
 
+vim.keymap.set('n', '<leader>dcs', ':DevcontainerStart<CR>', { desc = "Start devcontainer", noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dca', ':DevcontainerAttach bash<CR>', { desc = "Attach to devcontainer bash shell", noremap = true, silent = true })
+vim.keymap.set('n', '<leader>dcp', ':DevcontainerStop<CR>', { desc = "Stop devcontainer", noremap = true, silent = true })
+
 -- CMake Tools
 vim.keymap.set('n', '<leader>cmg', ':CMakeGenerate<CR>', { desc = "Generate Makefiles", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>cmb', ':CMakeBuild<CR>', { desc = "Build CMake target", noremap = true, silent = true })

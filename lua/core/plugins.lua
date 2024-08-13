@@ -119,6 +119,13 @@ return require('packer').startup(function(use)
         },
     }
 
+    use {
+        'esensar/nvim-dev-container',
+        requires = {
+            'nvim-treesitter/nvim-treesitter',
+        }
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
