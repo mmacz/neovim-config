@@ -51,6 +51,20 @@ vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({sele
 vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {desc = "Search current word"})
 vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {desc = "Search on current file"})
 
+-- move
+-- Normal-mode commands
+vim.keymap.set('n', '<C-j>', ':MoveLine(1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-k>', ':MoveLine(-1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-h>', ':MoveHChar(-1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<C-l>', ':MoveHChar(1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>wf', ':MoveWord(1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>wb', ':MoveWord(-1)<CR>', { noremap = true, silent = true })
+-- Visual-mode commands
+vim.keymap.set('v', '<C-j>', ':MoveBlock(1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-k>', ':MoveBlock(-1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-h>', ':MoveHBlock(-1)<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<C-l>', ':MoveHBlock(1)<CR>', { noremap = true, silent = true })
+
 -- lsp
 -- vim.keymap.set('n', '<leader>gd', telescope.lsp_definitions)
 -- vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration)

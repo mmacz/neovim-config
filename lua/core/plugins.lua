@@ -125,6 +125,7 @@ return require('packer').startup(function(use)
             'nvim-treesitter/nvim-treesitter',
         }
     }
+    use 'fedepujol/move.nvim'
 
     if packer_bootstrap then
         require('packer').sync()

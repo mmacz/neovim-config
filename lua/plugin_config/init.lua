@@ -12,4 +12,5 @@ require("plugin_config.lsp")
 require("plugin_config.venn")
 require("plugin_config.cmake-tools")
 require("plugin_config.devcontainer")
+require("plugin_config.move")
 
