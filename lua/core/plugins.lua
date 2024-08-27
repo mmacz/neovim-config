@@ -127,6 +127,15 @@ return require('packer').startup(function(use)
     }
     use 'fedepujol/move.nvim'
 
+    use {
+        'anurag3301/nvim-platformio.lua',
+        requires = {
+            {'akinsho/nvim-toggleterm.lua'},
+            {'nvim-telescope/telescope.nvim'},
+            {'nvim-lua/plenary.nvim'},
+        }
+    }
+
     if packer_bootstrap then
         require('packer').sync()
     end
