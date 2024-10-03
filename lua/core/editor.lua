@@ -17,7 +17,7 @@ vim.opt.expandtab = true
 vim.opt.wrap = false
 vim.opt.scrolloff = 15
 
-
+vim.opt.termguicolors = true
 vim.opt.completeopt = {'menuone', 'noselect', 'noinsert'}
 vim.opt.shortmess = vim.opt.shortmess + { c = true}
 vim.api.nvim_set_option('updatetime', 300)
@@ -25,3 +25,7 @@ vim.cmd([[
     set signcolumn=yes
     autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
+
+-- vim.cmd [[ colorscheme gruvbok ]]
+vim.cmd [[ colorscheme tokyonight-night ]]
+vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
