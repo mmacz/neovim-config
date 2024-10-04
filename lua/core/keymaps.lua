@@ -66,17 +66,17 @@ vim.keymap.set('v', '<C-h>', ':MoveHBlock(-1)<CR>', { noremap = true, silent = t
 vim.keymap.set('v', '<C-l>', ':MoveHBlock(1)<CR>', { noremap = true, silent = true })
 
 -- lsp
--- vim.keymap.set('n', '<leader>gd', telescope.lsp_definitions)
--- vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration)
--- vim.keymap.set('n', '<leader>gt', telescope.lsp_type_definitions)
--- vim.keymap.set('n', '<leader>gi', telescope.lsp_implementations)
--- vim.keymap.set('n', '<leader>gr', telescope.lsp_references)
--- vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover)
--- vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename)
--- vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action)
--- vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float)
--- vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
--- vim.keymap.set('n', ']d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', '<leader>gd', telescope.lsp_definitions, { desc = "LSP: Definitions" })
+vim.keymap.set('n', '<leader>gD', vim.lsp.buf.declaration, { desc = "LSP: Declarations" })
+vim.keymap.set('n', '<leader>gt', telescope.lsp_type_definitions, { desc = "LSP: Type definitions" })
+vim.keymap.set('n', '<leader>gi', telescope.lsp_implementations, { desc = "LSP: Implementations" })
+vim.keymap.set('n', '<leader>gr', telescope.lsp_references, { desc = "LSP: References" })
+vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Hover info" })
+vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = "LSP: Rename" })
+vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP: Code action" })
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = "LSP: Open float diagnostics" })
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "LSP: Goto prev diagnostic" })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "LSP: Goto next diagnostic" })
 
 -- rust-tools
 -- vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
