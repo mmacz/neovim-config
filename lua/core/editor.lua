@@ -26,6 +26,6 @@ vim.cmd([[
     autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })
 ]])
 
--- vim.cmd [[ colorscheme gruvbok ]]
-vim.cmd [[ colorscheme tokyonight-night ]]
-vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+vim.cmd [[ colorscheme gruvbox ]]
+-- vim.cmd [[ colorscheme tokyonight-night ]]
+-- vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
