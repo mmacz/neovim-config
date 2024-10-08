@@ -137,6 +137,8 @@ return require('packer').startup(function(use)
         }
     }
 
+    use 'sindrets/diffview.nvim'
+
     if packer_bootstrap then
         require('packer').sync()
     end
