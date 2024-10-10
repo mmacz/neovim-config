@@ -13,8 +13,6 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'ellisonleao/gruvbox.nvim'
-    use 'folke/tokyonight.nvim'
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons'
     use 'nvim-treesitter/nvim-treesitter'
@@ -46,17 +44,6 @@ return require('packer').startup(function(use)
             { 'nvim-lua/plenary.nvim' },
         }
     }
-
-  -- use {
-  -- 'Exafunction/codeium.vim',
-  -- config = function ()
-  --   -- Change '<C-g>' here to any keycode you like.
-  --   vim.keymap.set('i', '<c-g>', function () return vim.fn['codeium#Accept']() end, { expr = true, silent = true })
-  --   vim.keymap.set('i', '<c-;>', function() return vim.fn['codeium#CycleCompletions'](1) end, { expr = true, silent = true })
-  --   vim.keymap.set('i', '<c-,>', function() return vim.fn['codeium#CycleCompletions'](-1) end, { expr = true, silent = true })
-  --   vim.keymap.set('i', '<c-x>', function() return vim.fn['codeium#Clear']() end, { expr = true, silent = true })
-  --   end 
-  -- }
 
     use {
         'kdheepak/lazygit.nvim',
@@ -138,6 +125,11 @@ return require('packer').startup(function(use)
     }
 
     use 'sindrets/diffview.nvim'
+
+    -- colorschemes
+    use 'ellisonleao/gruvbox.nvim'
+    use 'folke/tokyonight.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     if packer_bootstrap then
         require('packer').sync()
