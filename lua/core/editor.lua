@@ -29,4 +29,4 @@ vim.cmd([[
 -- vim.cmd [[ colorscheme gruvbox ]]
 -- vim.cmd [[ colorscheme tokyonight-night ]]
 vim.cmd [[ colorscheme catppuccin-mocha ]] -- catpuccin, catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
+-- vim.cmd [[ hi Normal guibg=NONE ctermbg=NONE ]]
