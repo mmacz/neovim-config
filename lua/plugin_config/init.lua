@@ -14,4 +14,5 @@ require("plugin_config.cmake-tools")
 require("plugin_config.devcontainer")
 require("plugin_config.move")
 require("plugin_config.indent-blankline")
+require("plugin_config.git-blame")
 
