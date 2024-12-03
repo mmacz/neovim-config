@@ -11,7 +11,10 @@ vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>', { noremap = true, silent = true })
+vim.keymap.set('n', '<leader>wt', [[:%s/\s\+$//e<CR>]], { noremap =  true, silent = true, desc = "Trim trailing whitespaces" })
+vim.keymap.set('n', '<leader>cawc', ':%bd|e#|bd#<CR>', { noremap = true, silent = true, desc = "Close all buffers except focused one" })
 
+-- Devcontainer
 vim.keymap.set('n', '<leader>dcs', ':DevcontainerStart<CR>', { desc = "Start devcontainer", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>dca', ':DevcontainerAttach bash<CR>', { desc = "Attach to devcontainer bash shell", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>dcp', ':DevcontainerStop<CR>', { desc = "Stop devcontainer", noremap = true, silent = true })
@@ -74,9 +77,12 @@ vim.keymap.set('n', '<leader>gr', telescope.lsp_references, { desc = "LSP: Refer
 vim.keymap.set('n', '<leader>K', vim.lsp.buf.hover, { desc = "LSP: Hover info" })
 vim.keymap.set('n', '<leader>cr', vim.lsp.buf.rename, { desc = "LSP: Rename" })
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, { desc = "LSP: Code action" })
-vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = "LSP: Open float diagnostics" })
+vim.keymap.set('n', '<leader>lsd', vim.diagnostic.open_float, { desc = "LSP: Open float diagnostics" })
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "LSP: Goto prev diagnostic" })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "LSP: Goto next diagnostic" })
+
+-- Git blame
+vim.keymap.set('n', '<leader>gbt', ':GitBlameToggle<CR>', { noremap = true, silent = true, desc = 'Toggle git blame' })
 
 -- rust-tools
 -- vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
