@@ -1,3 +1,3 @@
-require("mmacz.core")
-require("mmacz.lazy")
+require("lazy.core")
+require("lazy.lazy")
 
