@@ -5,18 +5,14 @@ return {
     local alpha = require("alpha")
     local dashboard = require("alpha.themes.dashboard")
 
-    local header = string.format([[
-
- _   _      _ _      ______    _                _
-| | | |    | | |     |  ___|  (_)              | |
-| |_| | ___| | | ___ | |_ _ __ _  ___ _ __   __| |
-|  _  |/ _ \ | |/ _ \|  _| '__| |/ _ \ '_ \ / _` |
-| | | |  __/ | | (_) | | | |  | |  __/ | | | (_| |
-\_| |_/\___|_|_|\___/\_| |_|  |_|\___|_| |_|\__,_|
-
-    ]])
     -- Set header
-    dashboard.section.header.val = header
+    dashboard.section.header.val = {
+      " ░   ░░░  ░░        ░░░      ░░░  ░░░░  ░░        ░░  ░░░░  ░ ",
+      " ▒    ▒▒  ▒▒  ▒▒▒▒▒▒▒▒  ▒▒▒▒  ▒▒  ▒▒▒▒  ▒▒▒▒▒  ▒▒▒▒▒   ▒▒   ▒ ",
+      " ▓  ▓  ▓  ▓▓      ▓▓▓▓  ▓▓▓▓  ▓▓▓  ▓▓  ▓▓▓▓▓▓  ▓▓▓▓▓        ▓ ",
+      " █  ██    ██  ████████  ████  ████    ███████  █████  █  █  █ ",
+      " █  ███   ██        ███      ██████  █████        ██  ████  █ ",
+    }
 
     -- Set menu
     dashboard.section.buttons.val = {

@@ -3,9 +3,10 @@ return {
 	--  "ellisonleao/gruvbox.nvim", lazy = false, priority = 1000,
 	--  "folke/tokyonight.nvim", lazy = false, priority = 1000,
   -- "catppuccin/nvim", name = "catppuccin", priority = 1000,
-  "dgox16/oldworld.nvim", lazy = false, priority = 1000,
+  -- "dgox16/oldworld.nvim", lazy = false, priority = 1000,
+  "shaunsingh/nord.nvim", lazy = false, priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme oldworld]])
+		vim.cmd([[colorscheme nord]])
 	end,
 }
 
