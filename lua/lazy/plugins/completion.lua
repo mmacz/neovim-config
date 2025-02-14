@@ -5,8 +5,10 @@ return {
             'hrsh7th/cmp-nvim-lsp',
             'hrsh7th/cmp-path',
         },
+
         config = function()
             local cmp = require('cmp')
+
             cmp.setup({
 
                 completion = {
@@ -38,8 +40,8 @@ return {
                 sources = cmp.config.sources({
                     { name = 'nvim_lsp' },
                     { name = 'path' },
+                    { name = "render-markdown" },
                 }),
-
 
             })
         end,
