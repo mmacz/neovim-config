@@ -21,7 +21,7 @@ return {
             local servers = {
                 clangd = {},
 
-                cmake = {},
+                neocmake = {},
 
                 rust_analyzer = {
                     cargo = {
