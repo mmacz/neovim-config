@@ -40,8 +40,16 @@ return {
                 lua_ls = {
                     Lua = {
                         diagnostics = {globals = {'vim'}},
-                        workspace = {checkThirdParty = false},
                         telementry = {enable = false},
+                        runtime = { version = "LuaJIT" },
+                        workspace = {
+                          checkThirdParty = false,
+                          library = {
+                            "${3rd}/luv/library",
+                            unpack(vim.api.nvim_get_runtime_file("", true)),
+                          },
+                        },
+                        completion = { callSnippet = "Replace" },
                     },
                 },
 
