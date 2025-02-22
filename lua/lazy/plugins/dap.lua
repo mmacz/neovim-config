@@ -32,7 +32,6 @@ return {
 
     vscode.load_launchjs(nil, {
       lldb = { "c", "cpp", "rust"},
-      cppdbg = { "c", "cpp", "rust"},
       }
     )
 
