@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>qq', ':q!<CR>', { noremap = true, silent = true, de
 vim.keymap.set('n', '<leader>qqq', ':qa!<CR>', { noremap = true, silent = true, desc = "Quit that should've listened" })
 vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc = "Save" })
 vim.keymap.set('n', '<leader>wq', ':wq!<CR>', { noremap = true, silent = true, desc = "Save and quit" })
-vim.keymap.set('v', '>', '>gv')
-vim.keymap.set('v', '<', '<gv')
+vim.keymap.set('v', '>', '>gv', { noremap = true, desc = "Indent right" })
+vim.keymap.set('v', '<', '<gv', { noremap = true, desc = "Unindent left" })
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, desc = "Exit terminal mode" })
 
