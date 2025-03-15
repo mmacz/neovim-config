@@ -145,11 +145,11 @@ return {
     cmake_virtual_text_support = true, -- Show the target related to current file using virtual text (at right corner)
   }
 
-  vim.keymap.set('n', '<leader>cg', ':CMakeGenerate<CR>', { desc = "Generate Makefiles", noremap = true, silent = true })
-  vim.keymap.set('n', '<leader>cb', ':CMakeBuild<CR>', { desc = "Build CMake target", noremap = true, silent = true })
-  vim.keymap.set('n', '<leader>cr', ':CMakeRun<CR>', { desc = "Run CMake target", noremap = true, silent = true })
-  vim.keymap.set('n', '<leader>ct', ':CMakeRunTest<CR>', { desc = "Execute CTest", noremap = true, silent = true })
-  vim.keymap.set('n', '<leader>cc', ':CMakeClean<CR>', { desc = "Clean CMake cache", noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>cmg', ':CMakeGenerate<CR>', { desc = "Generate Makefiles", noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>cmb', ':CMakeBuild<CR>', { desc = "Build CMake target", noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>cmr', ':CMakeRun<CR>', { desc = "Run CMake target", noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>cmt', ':CMakeRunTest<CR>', { desc = "Execute CTest", noremap = true, silent = true })
+  vim.keymap.set('n', '<leader>cmc', ':CMakeClean<CR>', { desc = "Clean CMake cache", noremap = true, silent = true })
   end
 }
 
