@@ -3,14 +3,13 @@ return {
   dependencies = {
       'yavorski/lualine-macro-recording.nvim',
       'yavorski/lualine-lsp-progress.nvim',
-      'yavorski/lualine-lsp-client-name.nvim'
   },
   config = function()
     local lualine = require("lualine")
     lualine.setup({
       options = {
         icons_enabled = true,
-        theme = 'nightfly',
+        theme = 'gruvbox',
       },
       sections = {
           lualine_a = { "mode" },
