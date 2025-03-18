@@ -11,5 +11,5 @@ vim.keymap.set('n', '<leader>w', ':w<CR>', { noremap = true, silent = true, desc
 vim.keymap.set('n', '<leader>wq', ':wq!<CR>', { noremap = true, silent = true, desc = "Save and quit" })
 vim.keymap.set('v', '>', '>gv', { noremap = true, desc = "Indent right" })
 vim.keymap.set('v', '<', '<gv', { noremap = true, desc = "Unindent left" })
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { noremap = true, desc = "Exit terminal mode" })
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { noremap = true, desc = "Exit terminal mode" })
 
