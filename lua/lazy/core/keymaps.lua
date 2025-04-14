@@ -22,6 +22,15 @@ vim.keymap.set('n', '<leader>cmr', ':CMakeRun<CR>', { desc = "Run CMake target",
 vim.keymap.set('n', '<leader>cmt', ':CMakeRunTest<CR>', { desc = "Execute CTest", noremap = true, silent = true })
 vim.keymap.set('n', '<leader>cmc', ':CMakeClean<CR>', { desc = "Clean CMake cache", noremap = true, silent = true })
 
+-- Conan
+vim.keymap.set('n', "<leader>coi", ":Conan install<CR>", { desc = "Conan: install", noremap = true })
+vim.keymap.set('n', "<leader>cob", ":Conan build<CR>", { desc = "Conan: build", noremap = true })
+vim.keymap.set('n', "<leader>col", ":Conan lock<CR>", { desc = "Conan: lock", noremap = true })
+vim.keymap.set('n', "<leader>coc", ":Conan create<CR>", { desc = "Conan: create", noremap = true })
+vim.keymap.set('n', "<leader>coe", ":Conan export<CR>", { desc = "Conan: export", noremap = true })
+vim.keymap.set('n', "<leader>cop", ":Conan export_package<CR>", { desc = "Conan: export_package", noremap = true })
+vim.keymap.set('n', "<leader>cou", ":Conan upload<CR>", { desc = "Conan: upload", noremap = true })
+
 --- DAP
 local dap = require("dap")
 vim.keymap.set("n", "<leader>db", function() dap.toggle_breakpoint() end, { desc = "DAP: Toggle breakpoint" })
