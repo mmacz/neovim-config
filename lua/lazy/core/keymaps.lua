@@ -71,4 +71,11 @@ vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope oldfiles<cr>", { desc = 
 vim.keymap.set("n", "<leader>lg", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 vim.keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
+--- Rust Tools
+vim.keymap.set("n", "<leader>rdb", ":RustDebuggables<CR>", { desc = "Rust Tools: Debuggables", noremap = true })
+vim.keymap.set("n", "<leader>rtr", ":RustRunnables<CR>", { desc = "Rust Tools: Runnables", noremap = true })
+vim.keymap.set("n", "<leader>rihs", ":RustSetInlayHints<CR>", { desc = "Rust Tools: Inlay hints set", noremap = true })
+vim.keymap.set("n", "<leader>rihu", ":RustUnsetInlayHints<CR>", { desc = "Rust Tools: Inlay hints unset", noremap = true })
+vim.keymap.set("n", "<leader>rha", ":RustHoverActions<CR>", { desc = "Rust Tools: Hover actions", noremap = true })
+vim.keymap.set("n", "<leader>rfm", ":RustFmt<CR>", { desc = "Rust Tools: Format", noremap = true })
 
