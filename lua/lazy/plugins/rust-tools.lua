@@ -8,11 +8,18 @@ return {
   config = function ()
     local rt = require("rust-tools")
     rt.setup({
+      reload_workspace_from_cargo_toml = true,
       server = {
         on_attach = function(_, bufnr)
         end
       },
-      dap = {},
+      dap = {
+        adapter = {
+          type = "executable",
+          command = "lldb-dap",
+          name = "lldb"
+        }
+      },
     })
   end
 }
