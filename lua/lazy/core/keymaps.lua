@@ -79,3 +79,6 @@ vim.keymap.set("n", "<leader>rihu", ":RustUnsetInlayHints<CR>", { desc = "Rust T
 vim.keymap.set("n", "<leader>rha", ":RustHoverActions<CR>", { desc = "Rust Tools: Hover actions", noremap = true })
 vim.keymap.set("n", "<leader>rfm", ":RustFmt<CR>", { desc = "Rust Tools: Format", noremap = true })
 
+--- GitBlame
+vim.keymap.set("n", "<leader>gbt", ":GitBlameToggle<CR>", { desc = "Git Blame: Toggle", noremap = true })
+
