@@ -32,6 +32,10 @@ return {
         "cpp",
         "rust",
         "python",
+        "go",
+        "gomod",
+        "gosum",
+        "gowork"
       },
       incremental_selection = {
         enable = true,

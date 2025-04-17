@@ -2,12 +2,17 @@ return {
   "mfussenegger/nvim-dap",
   dependencies = {
     "rcarriga/nvim-dap-ui",
-    "nvim-neotest/nvim-nio"
+    "nvim-neotest/nvim-nio",
+    "leoluz/nvim-dap-go"
   },
   config = function()
     local dap = require("dap")
     local dapui = require("dapui")
-    local vscode = require('dap.ext.vscode')
+    local vscode = require("dap.ext.vscode")
+
+    local dap_go = require("dap-go")
+    dap_go.setup()
+
 
     dapui.setup()
 
@@ -25,9 +30,9 @@ return {
     end
 
     dap.adapters.lldb = {
-      type = 'executable',
-      command = 'lldb-dap',
-      name = 'lldb'
+      type = "executable",
+      command = "lldb-dap",
+      name = "lldb"
     }
 
     vscode.load_launchjs(nil, {

@@ -53,7 +53,11 @@ return {
                     },
                 },
 
-                pyright = {}
+                pyright = {},
+
+                gopls = {},
+
+                dockerls = {},
 
             }
 
