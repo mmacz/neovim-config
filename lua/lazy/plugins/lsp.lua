@@ -4,7 +4,7 @@ return {
         dependencies = {
             'nvim-telescope/telescope.nvim',
             'williamboman/mason.nvim',
-            'williamboman/mason-lspconfig.nvim',
+            {'williamboman/mason-lspconfig.nvim', branch = "v1.x" },
         },
 
         config = function()
