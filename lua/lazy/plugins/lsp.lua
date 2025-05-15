@@ -2,9 +2,9 @@ return {
     {
         'neovim/nvim-lspconfig',
         dependencies = {
-            'nvim-telescope/telescope.nvim',
-            'williamboman/mason.nvim',
-            {'williamboman/mason-lspconfig.nvim', branch = "v1.x" },
+          'nvim-telescope/telescope.nvim',
+          'mason-org/mason.nvim',
+          'mason-org/mason-lspconfig.nvim',
         },
 
         config = function()
@@ -87,19 +87,18 @@ return {
               }
             })
             require('mason-lspconfig').setup({
-                ensure_installed = vim.tbl_keys(servers)
+                ensure_installed = vim.tbl_keys(servers),
+                automatic_installation = true,
+                automatic_enable = false,
             })
 
-            require('mason-lspconfig').setup_handlers({
-                function(server_name)
-                    require('lspconfig')[server_name].setup({
-                        capabilities = vim.lsp.protocol.make_client_capabilities(),
-                        on_attach = on_attach,
-                        settings = servers[server_name],
-                        filetypes = (servers[server_name] or {}).filetypes,
-                    })
-                end,
-            })
+            for _, server_name in ipairs(require('mason-lspconfig').get_installed_servers()) do
+              vim.lsp.config(server_name, {
+                capabilities = vim.lsp.protocol.make_client_capabilities(),
+                on_attach = on_attach,
+              })
+              vim.lsp.enable(server_name)
+            end
 
             vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {border = 'rounded'})
 
