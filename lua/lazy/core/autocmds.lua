@@ -18,3 +18,15 @@ vim.api.nvim_create_autocmd("BufWritePost", {
   end
 })
 
+vim.opt.number = true
+vim.api.nvim_create_autocmd({ "BufEnter", "FocusGained", "InsertLeave" }, {
+  callback = function()
+    vim.wo.relativenumber = true
+  end,
+})
+vim.api.nvim_create_autocmd({ "BufLeave", "FocusLost", "InsertEnter" }, {
+  callback = function()
+    vim.wo.relativenumber = false
+  end,
+})
+
