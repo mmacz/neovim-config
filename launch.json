@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "nvim-dap Launch",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${executable}",
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": true,
+      "args": [],
+      "console": "integratedTerminal"
+    }
+  ]
+}
