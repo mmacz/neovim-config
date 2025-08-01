@@ -82,3 +82,9 @@ vim.keymap.set("n", "<leader>rfm", ":RustFmt<CR>", { desc = "Rust Tools: Format"
 --- GitBlame
 vim.keymap.set("n", "<leader>gbt", ":GitBlameToggle<CR>", { desc = "Git Blame: Toggle", noremap = true })
 
+-- Neotest
+vim.keymap.set("n", "<leader>ntt", function() require("neotest").run.run() end, { desc = "Neotest: run nearest test" })
+vim.keymap.set("n", "<leader>ntf", function() require("neotest").run.run(vim.fn.expand("%")) end, { desc = "Neotest: run file" })
+vim.keymap.set("n", "<leader>nta", function() require("neotest").run.run({ suite = true }) end, { desc = "Neotest: run all tests" })
+vim.keymap.set("n", "<leader>nts", function() require("neotest").summary.toggle() end, { desc = "Neotest: toggle summary" })
+vim.keymap.set("n", "<leader>nto", function() require("neotest").output.open({ enter = true, auto_close = true }) end, { desc = "Neotest: open output window" })
