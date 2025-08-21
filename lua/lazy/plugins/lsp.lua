@@ -8,16 +8,6 @@ return {
         },
 
         config = function()
-
-            vim.diagnostic.config({
-                underline = {
-                    severity = vim.diagnostic.severity.ERROR,
-                },
-                update_in_insert = false,
-                virtual_text = false,
-                severity_sort = true,
-            })
-
             local servers = {
                 clangd = {},
 
@@ -62,6 +52,15 @@ return {
             }
 
             local on_attach = function()
+                vim.diagnostic.config({
+                    -- underline = {
+                    --     severity = vim.diagnostic.severity.ERROR,
+                    -- },
+                    virtual_text = false,
+                    underline = false,
+                    signs = true,
+                    update_in_insert = false,
+                })
                 vim.o.signcolumn = 'yes:1'
                 local telescope = require('telescope.builtin')
                 vim.keymap.set('n', '<leader>gd', telescope.lsp_definitions, { desc = "LSP: Definitions" })
@@ -113,6 +112,11 @@ return {
               end,
             }
 
+            vim.api.nvim_create_autocmd("CursorHold", {
+                callback = function()
+                    vim.diagnostic.open_float(nil, { focus = false, scope = "line", border = "rounded" })
+                end,
+            })
             vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {border = 'rounded'})
 
         end,

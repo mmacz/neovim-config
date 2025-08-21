@@ -88,3 +88,12 @@ vim.keymap.set("n", "<leader>ntf", function() require("neotest").run.run(vim.fn.
 vim.keymap.set("n", "<leader>nta", function() require("neotest").run.run({ suite = true }) end, { desc = "Neotest: run all tests" })
 vim.keymap.set("n", "<leader>nts", function() require("neotest").summary.toggle() end, { desc = "Neotest: toggle summary" })
 vim.keymap.set("n", "<leader>nto", function() require("neotest").output.open({ enter = true, auto_close = true }) end, { desc = "Neotest: open output window" })
+
+-- PlatformIO
+vim.keymap.set("n", "<leader>pin", ":Pioinit<CR>", { desc = "PlatformIO: Init", noremap = true })
+vim.keymap.set("n", "<leader>pic", ":Piorun clean<CR>", { desc = "PlatformIO: Clean", noremap = true })
+vim.keymap.set("n", "<leader>pib", ":Piorun build<CR>", { desc = "PlatformIO: Build", noremap = true })
+vim.keymap.set("n", "<leader>piu", ":Piorun upload<CR>", { desc = "PlatformIO: Upload", noremap = true })
+
+-- CopilotChat
+vim.keymap.set("n", "<leader>cct", ":CopilotChatToggle<CR>", { desc = "Copilot Chat: Toggle", noremap = true })
